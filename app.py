@@ -34,6 +34,8 @@ with result_container:
     with col2:
         st.write(f"Latest Punjabi IPA  result : {st.session_state['guru_latn_pa_result']}")
 
+    st.text("IPA TABLE")
+
     html_string = str(HTML)
 
     st.markdown(html_string, unsafe_allow_html=True)

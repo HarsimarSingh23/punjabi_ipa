@@ -1,7 +1,7 @@
 import streamlit as st
 from gurmukhiutils.converters.guru_latn import guru_latn
 from gurmukhiutils.converters.guru_latn_pa import guru_latn_pa
-
+from table import HTML
 
 # Function to initialize session state
 def init_session_state():
@@ -34,4 +34,6 @@ with result_container:
     with col2:
         st.write(f"Latest Punjabi IPA  result : {st.session_state['guru_latn_pa_result']}")
 
+    html_string = str(HTML)
 
+    st.markdown(html_string, unsafe_allow_html=True)
